@@ -46,7 +46,7 @@ app.use('/user',UserRouter);
 app.use('/app', AppRouter);
 
 app.get("/",(req,res)=>{
-  res.json({message:"Hi From server"})
+  res.sendFile(__dirname+'/src/index.html')
 })
 
 // app.get('/secret',passport.authenticate('jwt',{session:false}),(req,res)=>{
